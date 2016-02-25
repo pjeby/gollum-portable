@@ -17,6 +17,7 @@ version: "2"
 services:
   gollum:
     image: pjeby/gollum-portable
+    restart: unless-stopped
     ports:
       - "4567:4567"
     volumes:
