@@ -23,7 +23,7 @@ or edit docker-compose.yml to customize other settings first.
 $ docker-compose up -d
 ```
 
-And then open `localhost:4567` in your browser.  Congratulations!  You now have a wiki that should keep autostart when you turn on your machine (or start your docker machine, if you're on Mac or Windows).  You can re-run `./docker/setup.sh` at any time to edit the settings, though you'll need to restart the service afterward.
+And then open `localhost:4567` in your browser.  Congratulations!  You now have a wiki that should autostart when you turn on your machine (or start your docker VM, if you're on Mac or Windows).  You can re-run `./docker/setup.sh` at any time to edit the settings, though you'll need to restart the service afterward.
 
 Your wiki repository is the directory you cloned into, and you can back it up, or move it to another machine and `docker-compose up -d` there.  (The two settings files, `docker-compose.yml` and `gollum-settings.env`, are not part of the repository, so if you copy it by cloning, you'll need to rerun the setup on the other machine.)
 
