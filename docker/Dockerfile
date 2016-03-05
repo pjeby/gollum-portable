@@ -18,12 +18,11 @@ COPY wrapper.rb /usr/local/bin/gollum-wrapper
 RUN chmod +x /usr/local/bin/gollum-wrapper && \
     mkdir -p /data/wiki && \
     git init /data/wiki && \
-    groupadd -r gollum && useradd -r -g gollum gollum && \
+    groupadd gollum && useradd -g gollum gollum && \
     chown -R gollum:gollum /data/wiki
 
 USER gollum
 VOLUME /data/wiki
-WORKDIR /data/wiki
 EXPOSE 4567
 
 CMD gollum-wrapper $GOLLUM_OPTIONS /data/wiki
