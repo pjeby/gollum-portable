@@ -6,7 +6,7 @@ require 'gollum/app'
 class Precious::App
     before do
         session['gollum.author'] = {
-            :name       => ENV['GOLLUM_AUTHOR_NAME'] || 'Anonymous',
+            :name       => ENV['GOLLUM_AUTHOR_USERNAME'] || 'Anonymous',
             :email      => ENV['GOLLUM_AUTHOR_EMAIL'] || 'anon@anon.com',
         }
     end
